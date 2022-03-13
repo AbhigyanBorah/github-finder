@@ -11,7 +11,7 @@ function About() {
           {" "}
           React Front To Back
         </a>{" "}
-        Udemy Course by <strong>Brad Traversy</strong>.
+        Course by <strong>Brad Traversy</strong>.
       </p>
       <p className='text-lg text-gray-400'>
         Version <span className='text-white'>1.0.0</span>

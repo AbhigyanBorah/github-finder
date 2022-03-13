@@ -91,9 +91,10 @@ function User() {
                 </a>
               </div>
             </div>
-            <div className="w-96 xl:w-full lg:w-full md:w-full rounded-lg shadow-md bg-base-100 stats">
+            <div className="w-full rounded-lg bg-base-100 stats">
+            <div className="grid grid-cols-auto md:grid-cols-7 lg:grid-cols-7 xl:grid-cols-7">
               {location && (
-                <div className="stat text-gray-600 bg-neutral bg-opacity-40">
+                <div className="stat shadow-md text-gray-600 bg-neutral bg-opacity-40 xl:col-span-2 lg:col-span-2 md:col-span-2">
                   <div className="stat-title text-md text-gray-200">
                     Location
                   </div>
@@ -103,7 +104,7 @@ function User() {
                 </div>
               )}
               {blog && (
-                <div className="stat text-gray-600 bg-neutral bg-opacity-40">
+                <div className="stat shadow-md text-gray-600 bg-neutral bg-opacity-40 xl:col-span-3 lg:col-span-3 md:col-span-3">
                   <div className="stat-title text-md text-gray-200">
                     Website
                   </div>
@@ -119,11 +120,11 @@ function User() {
                 </div>
               )}
               {twitter_username && (
-                <div className="stat text-gray-600 bg-neutral bg-opacity-40">
+                <div className="stat shadow-md text-gray-600 bg-neutral bg-opacity-40 xl:col-span-2 lg:col-span-2 md:col-span-2">
                   <div className="stat-title text-md text-gray-200">
                     Twitter
                   </div>
-                  <div className="text-lg stat-value text-gray-200">
+                  <div className="text-sm stat-value text-gray-200">
                     <a
                       href={`https://twitter.com/${twitter_username}`}
                       target="_blank"
@@ -135,9 +136,11 @@ function User() {
                 </div>
               )}
             </div>
+            </div>
           </div>
         </div>
         <div className="w-full py-5 mb-6 rounded-lg shadow md bg-neutral bg-opacity-40 stats stats-vertical lg:stats-horizontal">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
           <div className="stat text-gray-600 bg-neutral bg-opacity-40">
             <div className="stat-figure text-info">
               <FaUsers className="text-3xl md:text-5xl" />
@@ -174,6 +177,7 @@ function User() {
               {public_gists}
             </div>
           </div>
+        </div>
         </div>
 
         <RepoList repos={repos} />
