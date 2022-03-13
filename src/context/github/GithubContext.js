@@ -3,6 +3,7 @@ import GithubReducers from "./GithubReducers";
 
 const GithubContext=createContext()
 
+//github provider
 export const GithubProvider=({children})=>{
     const initialState={
       users:[],
